@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gaming | Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../css/styles.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="../js/cart.js"></script>
+        <script src="../js/storetest.js"></script>
+    </head>
+    <body onload="cartList()">
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+                <a onload="" href="../html/cart.html"><i class="bi-cart4" style="color: #56CCF2;"></i>(<span id="cart" style="color: white;">0</span>)</a>
+            </nav>
+            <h1 class="brand-name brand-name-large">Gaming Warehouse</h1>
+        </header>
+        <section class="container content-section">
+            <table class="table table-striped" id="cartItems">
+                <thead>
+                    <tr class="cartWords">
+                        <th scope="col">Remove Item</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody id="task-row" class="cartItems">
+                </tbody>
+            </table>
+
+            <button class="btn btn-primary" onclick = "clearAll()">Clear Cart</button>
+            <br><br>
+
+            <form action="">
+            </form>
+
+            <form>
+            <!--Coupon form-->
+            <h2 class="coupon">Enter Coupon (DISCOUNT123)</h2>
+                 <div class="form-group">
+                    <input type="text" class="form-control" id="cartCoupon" placeholder="Enter coupon">
+                </div>
+
+            <!--Submit button-->
+            <button onclick="getCouponData()" type="button" class="btn btn-primary submit">Submit</button>
+        
+        </form>
+
+            <br>
+
+            <h3 id="cartTotal">
+            </h3>
+
+            <h3 id="discount" style="display:none ;">
+            </h3>
+
+            <h3 id="newVat">
+            </h3>
+
+            <h3 id="finalTotal">
+            </h3>
+
+            <button class="btn btn-primary" id="checkoutButton">Checkout</button>
+
+
+            <br><br>
+
+        </section>
+ 
+    </div>
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <h3 class="brand-name">Gaming Warehouse</h3>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="../images/Youtube Logo.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.spotify.com" target="_blank">
+                        <img src="../images/Spotify Logo.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="../images/Facebook Logo.png">
+                    </a>
+                </li>
+            </ul>
+    </footer>
+</body>
+</html>
